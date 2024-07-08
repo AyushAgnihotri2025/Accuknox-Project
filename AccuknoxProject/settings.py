@@ -32,9 +32,9 @@ env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = eval(env('DEBUG'))
+DEBUG = env('DEBUG').lower() == "true"
 
-DEPLOYMENT = eval(env('DEPLOYMENT'))
+DEPLOYMENT = env('DEPLOYMENT').lower() == "true"
 
 ALLOWED_HOSTS = ['*']
 

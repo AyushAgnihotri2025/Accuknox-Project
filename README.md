@@ -5,49 +5,51 @@ This project is a social media platform built using Django and Django Rest Frame
 
 The project structure is as follows:
 
+```
     AccuknoxProject/
-    ├── Accounts
-   `│   ├── __init__.py
-   │   ├── admin.py
-   │   ├── apps.py
-   │   ├── management
-   │   │   └── commands
-   │   │       └── populate_users.py
-   │   ├── migrations
-   │   │   └── __init__.py
-   │   ├── models.py
-   │   ├── serializers.py
-   │   ├── tests.py
-   │   ├── urls.py
-   │   └── views.py
-   ├── AccuknoxProject
-   │   ├── __init__.py
-   │   ├── asgi.py
-   │   ├── backends
-   │   │   └── user.py
-   │   ├── middleware.py
-   │   ├── settings.py
-   │   ├── urls.py
-   │   └── wsgi.py
-   ├── Dockerfile
-   ├── FriendsNetwork
-   │   ├── __init__.py
-   │   ├── admin.py
-   │   ├── apps.py
-   │   ├── migrations
-   │   │   └── __init__.py
-   │   ├── models.py
-   │   ├── serializers.py
-   │   ├── tests.py
-   │   ├── urls.py
-   │   └── views.py
-   ├── README.md
-   ├── docker-compose.yml
-   ├── entrypoint.sh
-   ├── fixtures
-   │   └── users.json
-   ├── manage.py
-   └── requirements.txt`
+        ├── Accounts
+        │   ├── __init__.py
+        │   ├── admin.py
+        │   ├── apps.py
+        │   ├── management
+        │   │   └── commands
+        │   │       └── populate_users.py
+        │   ├── migrations
+        │   │   └── __init__.py
+        │   ├── models.py
+        │   ├── serializers.py
+        │   ├── tests.py
+        │   ├── urls.py
+        │   └── views.py
+        ├── AccuknoxProject
+        │   ├── __init__.py
+        │   ├── asgi.py
+        │   ├── backends
+        │   │   └── user.py
+        │   ├── middleware.py
+        │   ├── settings.py
+        │   ├── urls.py
+        │   └── wsgi.py
+        ├── Dockerfile
+        ├── FriendsNetwork
+        │   ├── __init__.py
+        │   ├── admin.py
+        │   ├── apps.py
+        │   ├── migrations
+        │   │   └── __init__.py
+        │   ├── models.py
+        │   ├── serializers.py
+        │   ├── tests.py
+        │   ├── urls.py
+        │   └── views.py
+        ├── README.md
+        ├── docker-compose.yml
+        ├── entrypoint.sh
+        ├── fixtures
+        │   └── users.json
+        ├── manage.py
+        └── requirements.txt
+```
 
 
 

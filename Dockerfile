@@ -5,6 +5,10 @@ FROM python:3.11
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
+# Upgrade packages and install Netcat
+RUN apt update && apt -y dist-upgrade
+RUN apt install -y netcat-traditional
+
 # Create and set the working directory inside the container
 WORKDIR /AccuknoxProject
 

@@ -8,16 +8,16 @@ while ! nc -z db 5432; do
 done
 
 # Apply database migrations
+echo "Making database migrations..."
+python manage.py makemigrations
+
+# Apply database migrations
 echo "Applying database migrations..."
 python manage.py migrate
 
-# Collect static files (if needed)
-echo "Collecting static files..."
-python manage.py collectstatic --noinput
-
 # Populate Database with Fake Data
 echo "Populating DataBase..."
-python manage.py populate_users 100
+python manage.py populate_users 1000
 
 # Start the Django server
 echo "Starting the server..."
