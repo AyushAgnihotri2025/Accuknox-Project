@@ -17,11 +17,15 @@ Including another URLconf
 
 from django.urls import path
 
-from FriendsNetwork.views import SearchView, ListFriendsView, ListPendingFriendRequestView, FriendRequestView
+from FriendsNetwork.views import SearchView, ListFriendsView, ListPendingFriendRequestView, FriendRequestView, \
+    ListSentPendingFriendRequestView, ListRejectedFriendRequestView
 
 urlpatterns = [
     path('search/', SearchView.as_view(), name='search_users'),
     path('friend-request/', FriendRequestView.as_view(), name='accept_friend_request'),
     path('list_friends/', ListFriendsView.as_view(), name='list_friends'),
-    path('list_pending_friend_requests/', ListPendingFriendRequestView.as_view(), name='list_pending_friend_requests'),
+    path('received-requests/', ListPendingFriendRequestView.as_view(), name='list_pending_friend_requests'),
+    path('rejected-requests/', ListRejectedFriendRequestView.as_view(), name='list_rejected_friend_requests'),
+    path('sent-requests/', ListSentPendingFriendRequestView.as_view(),
+         name='list_sent_pending_friend_requests'),
 ]

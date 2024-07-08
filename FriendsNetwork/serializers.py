@@ -17,10 +17,17 @@ class FriendRequestSerializer(serializers.ModelSerializer):
         fields = ['id', 'sender', 'receiver', 'status', 'created_at']
 
 
+class FriendRequestListSerializer(serializers.ModelSerializer):
+    sender = UserSerializer(read_only=True)
+
+    class Meta:
+        model = FriendRequest
+        fields = ['id', 'sender', 'status', 'created_at']
+
+
 class FriendshipSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
     friend = UserSerializer(read_only=True)
 
     class Meta:
         model = Friendship
-        fields = ['id', 'user', 'friend', 'created_at']
+        fields = ['id', 'friend', 'created_at']

@@ -126,8 +126,9 @@ The project structure is as follows:
 - Send Friend Request: POST /friend_request/
 - Accept or Reject Friend Request: PUT /friend_requests/
 - List All Friend Requests: GET /list_friends/
-- List Pending Friend Requests: GET /list_pending_friend_requests/
-- List Rejected Friend Requests: GET /list_rejected_friend_requests/
+- List Pending Friend Requests: GET /received-requests/
+- List Rejected Friend Requests: GET /rejected-requests/
+- List Sent Friend Requests: GET /sent-requests/
 
 ## Settings
 
@@ -150,7 +151,7 @@ API Version can be set in settings.py under the VERSION parameter.
 
 ### Run in Postman button : 
 
-[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">]()
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/28014191-a593aaa5-58fa-4521-9f4d-159af98fecc8?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D28014191-a593aaa5-58fa-4521-9f4d-159af98fecc8%26entityType%3Dcollection%26workspaceId%3D9984493a-d386-4be2-9664-25c75a3d215b)
 
 
 

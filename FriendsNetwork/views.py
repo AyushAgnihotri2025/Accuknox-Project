@@ -13,7 +13,8 @@ from rest_framework.views import APIView
 
 from Accounts.models import User
 from FriendsNetwork.models import FriendRequest, Friendship
-from FriendsNetwork.serializers import UserSerializer, FriendRequestSerializer, FriendshipSerializer
+from FriendsNetwork.serializers import UserSerializer, FriendRequestSerializer, FriendshipSerializer, \
+    FriendRequestListSerializer
 
 
 # Create your views here.
@@ -102,6 +103,24 @@ class ListPendingFriendRequestView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        return Response(FriendRequestSerializer(FriendRequest.objects.filter(receiver=self.request.user, status='1'),
-                                                many=True).data,
+        return Response(FriendRequestListSerializer(FriendRequest.objects.filter(receiver=self.request.user, status=1),
+                                                    many=True).data,
+                        status=status.HTTP_200_OK)
+
+
+class ListSentPendingFriendRequestView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        return Response(FriendRequestListSerializer(FriendRequest.objects.filter(sender=self.request.user, status=1),
+                                                    many=True).data,
+                        status=status.HTTP_200_OK)
+
+
+class ListRejectedFriendRequestView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        return Response(FriendRequestListSerializer(FriendRequest.objects.filter(receiver=self.request.user, status='3'),
+                                                    many=True).data,
                         status=status.HTTP_200_OK)
