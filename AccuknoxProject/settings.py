@@ -175,4 +175,6 @@ AUTHENTICATION_BACKENDS = [
     'AccuknoxProject.backends.user.EmailBackend',
 ]
 
+CORS_ALLOWED_ORIGINS = ['localhost:8000', 'localhost:9000']
+
 VERSION = env('VERSION', default="v1")
