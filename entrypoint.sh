@@ -17,7 +17,7 @@ python manage.py migrate
 
 # Populate Database with Fake Data
 echo "Populating DataBase..."
-python manage.py populate_users 1000
+python manage.py populate_users 100
 
 # Start the Django server
 echo "Starting the server..."
