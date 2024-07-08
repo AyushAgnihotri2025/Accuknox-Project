@@ -16,7 +16,7 @@ class Command(BaseCommand):
         fake = Faker()
 
         # Entering Test Data
-        email = 'testuser2@mrayush.in'
+        email = 'testuser@mrayush.in'
         name = 'Ayush Test User'
         password = 'password123'  # You can generate a random password if needed
 
